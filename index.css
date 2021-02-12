@@ -1,0 +1,268 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Dancing Script", cursive;
+  font-family: "Patrick Hand", cursive;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background-color: #afe9d5;
+  overflow: none;
+  margin: auto;
+}
+
+#down {
+  position: absolute;
+  top: 80%;
+  left: 35%;
+  color: #43a785;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 4;
+}
+
+h3 {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 45px;
+  word-spacing: -2px;
+  font-family: "Press Start 2P", cursive;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#cover {
+  display: none;
+  width: 500px;
+  height: 300px;
+  background-color: #afe9d5;
+  z-index: 3;
+  -webkit-animation: moveCover 3s forwards;
+          animation: moveCover 3s forwards;
+}
+
+#entera {
+  margin-top: -10px;
+  z-index: 5;
+}
+
+#outer {
+  z-index: 99;
+}
+
+.fortune {
+  display: none;
+}
+
+area {
+  display: none;
+  outline: none;
+}
+
+.cracked {
+  display: none;
+  position: absolute;
+  -webkit-animation: outerC 3s forwards;
+          animation: outerC 3s forwards;
+}
+
+#paper {
+  display: none;
+  position: absolute;
+  -webkit-animation: movePaper 3s;
+          animation: movePaper 3s;
+  z-index: 2;
+}
+
+#written {
+  display: none;
+  z-index: 2;
+  display: flex;
+  width: 390px;
+  height: 120px;
+  margin-left: 45px;
+  justify-content: center;
+  position: absolute;
+  top: 225px;
+  margin-left: 75px;
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+  font-size: 25px;
+  line-height: 28px;
+  -webkit-animation: moveWritten 3s;
+          animation: moveWritten 3s;
+  color: #5a5a5a;
+}
+
+@-webkit-keyframes outerC {
+  0% {
+    transform: rotateX(0deg);
+  }
+  15% {
+    transform: translate(-5%) translateY(-3%);
+  }
+  30% {
+    transform: rotate(-20deg) translate(0%) translateY(0%);
+  }
+  100% {
+    transform: translate(40%) rotate(-20deg);
+  }
+}
+
+@keyframes outerC {
+  0% {
+    transform: rotateX(0deg);
+  }
+  15% {
+    transform: translate(-5%) translateY(-3%);
+  }
+  30% {
+    transform: rotate(-20deg) translate(0%) translateY(0%);
+  }
+  100% {
+    transform: translate(40%) rotate(-20deg);
+  }
+}
+@-webkit-keyframes movePaper {
+  0% {
+    transform: translateX(55%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes movePaper {
+  0% {
+    transform: translateX(55%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes moveCover {
+  0% {
+    transform: translateX(69%);
+  }
+  30% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+@keyframes moveCover {
+  0% {
+    transform: translateX(69%);
+  }
+  30% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+@-webkit-keyframes moveWritten {
+  0% {
+    transform: translateX(70%);
+  }
+  15% {
+    transform: translateX(51%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes moveWritten {
+  0% {
+    transform: translateX(70%);
+  }
+  15% {
+    transform: translateX(51%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes moveCover2 {
+  0% {
+    transform: translateX(72%);
+  }
+  30% {
+    transform: translateX(62%);
+  }
+  100% {
+    transform: translateX(135%);
+  }
+}
+@keyframes moveCover2 {
+  0% {
+    transform: translateX(72%);
+  }
+  30% {
+    transform: translateX(62%);
+  }
+  100% {
+    transform: translateX(135%);
+  }
+}
+@media all and (max-width: 500px) {
+  h3 {
+    font-size: 22px;
+  }
+
+  #down {
+    left: 25%;
+  }
+}
+@media all and (max-width: 472px) {
+  h3 {
+    font-size: 16px;
+  }
+
+  #written {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 470px) {
+  h3 {
+    font-size: 16px;
+    margin-left: 50px;
+  }
+
+  .cracked,
+.roll,
+#entera {
+    scale: 0.6;
+  }
+
+  #written {
+    font-size: 15px;
+    height: 30px;
+    width: 190px;
+    margin-left: 36px;
+  }
+
+  #cover {
+    -webkit-animation: moveCover2 3s forwards;
+            animation: moveCover2 3s forwards;
+  }
+}
+@media all and (max-width: 390px) {
+  #written {
+    margin-top: 15px;
+  }
+
+  h3 {
+    font-size: 14;
+  }
+}
+@media all and (max-width: 332px) {
+  #cover {
+    -webkit-animation: moveCover2 3s forwards;
+            animation: moveCover2 3s forwards;
+  }
+}/*# sourceMappingURL=index.css.map */
